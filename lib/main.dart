@@ -29,21 +29,43 @@ class Practica1Text1 extends StatelessWidget {
         ),
         backgroundColor: const Color(0xff514eed),
       ),
-      body: const Center(
-        child: Text(
-          'Martin',
-          style: TextStyle(
-              fontSize: 40.0, //tama
-              fontWeight: FontWeight.bold, //negrita
-              letterSpacing: 2.0, // interespaciado
-              color: Color(0xff085c1d), // color letra
-              fontFamily: "Poppin"),
-        ),
+      body: Row(
+        children: [
+          const Expanded(
+              flex: 3, // flex
+              child: Image(
+                  image: NetworkImage(
+                      "https://raw.githubusercontent.com/nava128/Img_IOS/main/icon2.jpg")) //image network
+              ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: const EdgeInsets.all(30), //pading
+              color: Colors.purpleAccent, //color
+              child: const Text("1"), // texto
+            ),
+            //image network
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: const EdgeInsets.all(30),
+                color: Colors.amber,
+                child: const Text("2")),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: const EdgeInsets.all(30),
+                color: Colors.pinkAccent,
+                child: const Text("3")),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.red[600],
-        child: const Text("Click"),
+        backgroundColor: Colors.red[600], //color de fondo
+        child: const Text("Click"), //child text
       ),
     );
   }
